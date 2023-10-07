@@ -3,7 +3,7 @@ FROM openjdk:17-jdk-alpine
 # 관리자 이메일
 LABEL maintainer="silver36c@gmail.com"
 # 변수 정의
-ARG JAR_FILE=./build/libs/rebing-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=./build/libs/pistage-0.0.1-SNAPSHOT.jar
 # 로컬의 JAR_FILE을 컨테이너에 app.jar이라는 이름으로 복사
 COPY ${JAR_FILE} app.jar
 # 포트 열어주기
