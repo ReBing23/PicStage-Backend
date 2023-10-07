@@ -51,6 +51,7 @@ jobs:
         run: |
           javac -version
           which javac
+          ls /usr/lib/jvm/
 
       - name: make main application.yml
         run: |
