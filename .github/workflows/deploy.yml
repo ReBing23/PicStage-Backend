@@ -71,7 +71,7 @@ jobs:
       - name: 스프링부트 애플리케이션 빌드 
         run: |
           chmod +x gradlew
-          sudo ./gradlew clean build -Dorg.gradle.java.home=/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk
+          sudo ./gradlew clean build -Dorg.gradle.java.home=/usr/lib/jvm/temurin-17-jdk-amd64
         shell: bash
 
       - name: 도커 이미지 빌드 
