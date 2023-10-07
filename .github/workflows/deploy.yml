@@ -58,8 +58,8 @@ jobs:
       # 파일 없으면 빌드 에러
       - uses: actions/upload-artifact@v3
         with:
-          name: application.yml
-          path: ./wingle/src/main/resources/application.yml
+          name: application.yml 파일 확인
+          path: ./src/main/resources/application.yml
           if-no-files-found: 'error'
       
       - name: 스프링부트 애플리케이션 빌드 
