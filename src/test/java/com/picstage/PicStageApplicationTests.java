@@ -1,10 +1,10 @@
-package com.pistage;
+package com.picstage;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PistageApplicationTests {
+class PicStageApplicationTests {
 
 	@Test
 	void contextLoads() {
