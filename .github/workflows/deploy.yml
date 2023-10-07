@@ -75,7 +75,7 @@ jobs:
         shell: bash
 
       - name: 도커 이미지 빌드 
-        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKER_IMAGE_NAME }}:latest .
+        run: docker build -t ${{ secrets.DOCKER_IMAGE_NAME }}:latest .
 
       - name: Docker Hub 로그인 
         uses: docker/login-action@v2
