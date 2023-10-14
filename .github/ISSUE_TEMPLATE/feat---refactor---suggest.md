@@ -9,7 +9,7 @@ assignees: ''
 
 ## ✅ Checklist
 
-- [ ] 이슈 제목 작성 [feat] 개발할 기능
+- [ ] 이슈 제목 작성 [FEAT] 개발할 기능
 
 ## ✏️ Description
 
