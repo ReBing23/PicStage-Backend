@@ -33,16 +33,16 @@ jobs:
       # - name: Setup Gradle
       #   uses: gradle/gradle-build-action@v2
 
-      # - name: Gradle Caching
-      #   uses: actions/cache@v3
-      #   with:
-      #     path: |
-      #       ~/.gradle/caches
-      #       ~/.gradle/wrapper
-      #     key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*',
-      #       '**/gradle-wrapper.properties') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-gradle-
+      - name: Gradle Caching
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*',
+            '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
 
       - name: 현재 디렉터리에 있는 파일 확인
         run: ls
@@ -51,6 +51,7 @@ jobs:
         run: |
           javac -version
           which javac
+          ls /usr/lib/jvm/
 
       - name: make main application.yml
         run: |
@@ -70,7 +71,7 @@ jobs:
       - name: 스프링부트 애플리케이션 빌드 
         run: |
           chmod +x gradlew
-          sudo ./gradlew clean build -Dorg.gradle.java.home=/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.8-1/x64/bin/javac
+          sudo ./gradlew build -Dorg.gradle.java.home=/usr/lib/jvm/temurin-17-jdk-amd64
         shell: bash
 
       - name: 도커 이미지 빌드 
